@@ -26,8 +26,7 @@
 #pragma comment(lib,"sfml-network.lib") 
 #endif 
 #pragma comment(lib,"opengl32.lib") 
-#pragma comment(lib,"glu32.lib")
-
+#pragma comment(lib,"glu32.lib") 
 
 
 
@@ -36,6 +35,8 @@
 
 int main()
 {
+	srand((int)time(nullptr)); // set the seed once
+
 	Game aGame;
 	aGame.loadContent();
 	aGame.run();
@@ -68,8 +69,6 @@ void Game::loadContent()
 void Game::run()
 // This function contains the main game loop which controls the game. 
 {
-
-	srand((int)time(nullptr)); // set the seed once
 
 	sf::Time timePerFrame = sf::seconds(1.0f / 60.0f);
 
